@@ -1,0 +1,77 @@
+/******************************************************************************
+ * Content
+ ******************************************************************************/
+
+@use "variables" as v;
+
+body {
+  padding-bottom: 70px;
+  color: var(--global-text-color);
+  background-color: var(--global-bg-color);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    scroll-margin-top: 66px;
+  }
+}
+
+body.fixed-top-nav {
+  // Add some padding for the nav-bar.
+  padding-top: 57px;
+}
+
+body.sticky-bottom-footer {
+  // Remove padding below footer.
+  padding-bottom: 0;
+}
+
+.container {
+  max-width: v.$max-content-width;
+}
+
+// Profile
+.profile {
+  img {
+    width: 100%;
+  }
+}
+
+// Content layout uses Bootstrap's grid system with responsive columns
+// Main content flows naturally through container-mt-5 and Bootstrap grid classes
+// See _layouts/default.liquid and _includes/projects.liquid for examples
+
+/******************************************************************************
+ * Publications
+ ******************************************************************************/
+
+// Publications layout is defined in _includes/bib_search.liquid
+// Uses jekyll-scholar for BibTeX parsing and Bootstrap cards for display
+
+/*****************************************************************************
+* Projects
+*****************************************************************************/
+
+// TODO: redefine projects layout.
+
+/* ---- rbelsunce.github.io additions ---- */
+// Research-highlights figure (Oliver Philcox pattern promoted to a class)
+.research-fig {
+  float: right;
+  width: 260px;
+  max-width: 45%;
+  margin: 0 0 1em 1.5em;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+// Theme headers (h2) visibly above topic headers (h3) on the research page and elsewhere
+.post article h2 { margin-top: 3rem; padding-bottom: 0.3rem; border-bottom: 1px solid var(--global-divider-color); }
+.post article h2:first-of-type { margin-top: 1.5rem; }
+.post article h3 { font-size: 1.5rem; margin-top: 1.75rem; }
+// Mobile: stack figures, shrink the profile photo
+@media (max-width: 575.98px) {
+  .research-fig { float: none; display: block; width: 100%; max-width: 100%; margin: 0 0 1em 0; }
+}

@@ -1,0 +1,68 @@
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1" # Mondays 06:00 UTC: refresh the publication list from INSPIRE-HEP
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-site
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh publications from INSPIRE-HEP
+        run: |
+          pip install -r requirements.txt
+          python scripts/generate_pubs.py --config scripts/pubs_config.yaml \
+            || echo "::warning::INSPIRE fetch failed; building with the committed _bibliography/papers.bib"
+
+      - name: Commit the refreshed bibliography back to main (if it changed)
+        run: |
+          if git diff --quiet -- _bibliography/papers.bib; then
+            echo "papers.bib unchanged"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add _bibliography/papers.bib
+            git commit -m "Refresh publications from INSPIRE-HEP"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true
+
+      - name: Build
+        run: |
+          export JEKYLL_ENV=production
+          bundle exec jekyll build
+
+      - name: Purge unused CSS
+        run: |
+          npm install -g purgecss
+          purgecss -c purgecss.config.js
+
+      - name: Deploy to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site
+          single-commit: true

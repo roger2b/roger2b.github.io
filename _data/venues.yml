@@ -1,0 +1,17 @@
+# Venue badges shown left of publication entries (matched via the `abbr` BibTeX field)
+"PRL":
+  url: https://journals.aps.org/prl/
+"PRD":
+  url: https://journals.aps.org/prd/
+"JCAP":
+  url: https://iopscience.iop.org/journal/1475-7516
+"MNRAS":
+  url: https://academic.oup.com/mnras
+"ApJ":
+  url: https://iopscience.iop.org/journal/0004-637X
+"ApJS":
+  url: https://iopscience.iop.org/journal/0067-0049
+"AJ":
+  url: https://iopscience.iop.org/journal/1538-3881
+"PoS":
+  url: https://pos.sissa.it/

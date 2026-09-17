@@ -1,0 +1,115 @@
+# CV rendered as HTML on /cv/ (RenderCV-style schema used by al-folio's _layouts/cv.liquid). No PDF by design.
+cv:
+  name: Roger de Belsunce
+  label: Postdoctoral Fellow, MIT Center for Theoretical Physics – a Leinweber Institute · IAIFI Junior Investigator
+  website: https://roger2b.github.io
+  summary: >
+    Cosmologist working on the Lyman-α forest, the cosmic microwave background and the growth of structure.
+    I combine analytic theory, simulations and machine learning to extract fundamental physics from surveys such as DESI and Planck.
+
+  address:
+    city: Cambridge
+    region: MA
+    postalCode: "02139"
+    countryCode: US
+
+  sections:
+    Experience:
+      - company: Massachusetts Institute of Technology
+        position: Postdoctoral Fellow, Center for Theoretical Physics – a Leinweber Institute
+        location: Cambridge, MA
+        url: https://ctp.lns.mit.edu/
+        start_date: 2025
+        end_date: present
+        highlights:
+          - "Mentor: Mikhail M. Ivanov"
+          - "Theoretical modelling of cross-correlations between high-redshift tracers for next-generation spectroscopic surveys"
+          - "Probabilistic variational inference for dark-matter searches with Fermi-LAT data"
+      - company: NSF AI Institute for Artificial Intelligence and Fundamental Interactions (IAIFI)
+        position: Junior Investigator
+        location: Cambridge, MA
+        url: https://iaifi.org/
+        start_date: 2025
+        end_date: present
+        highlights:
+          - "Simulation-based priors for optimal cosmological data analysis"
+          - "Machine-learning augmentation of hydrodynamic simulations"
+      - company: Lawrence Berkeley National Laboratory & UC Berkeley
+        position: Cosmology Fellow, Berkeley Center for Cosmological Physics
+        location: Berkeley, CA
+        url: https://www.lbl.gov/
+        start_date: 2022
+        end_date: 2025
+        highlights:
+          - "Mentors: Nathalie Palanque-Delabrouille & Simone Ferraro"
+          - "Detection of the cross-correlation between CMB lensing and the Lyman-α forest"
+          - "First measurement of the 3D power spectrum of the Lyman-α forest"
+
+    Education:
+      - institution: University of Cambridge — Kavli Institute for Cosmology & Institute of Astronomy
+        location: Cambridge, UK
+        studyType: PhD in Cosmology
+        start_date: 2018
+        end_date: 2022
+        highlights:
+          - "Advisors: George Efstathiou & Steven Gratton"
+          - "Thesis: *Cosmology from the CMB and Lyman-α forest* — primordial gravitational waves from polarized CMB data; likelihood approximations and Bayesian foreground removal for large-angle CMB data"
+      - institution: ETH Zurich
+        location: Zurich, Switzerland
+        studyType: BSc & MSc in Theoretical Physics
+        start_date: 2012
+        end_date: 2018
+        highlights:
+          - "Master's thesis in theoretical cosmology at Stanford University with Leonardo Senatore (2017–2018): dark-matter clustering with massive neutrinos in the effective field theory of large-scale structure"
+          - "Bachelor's thesis in particle physics at CERN with Günther Dissertori (2016): photon scintillation modelling for an upgraded LHC detector"
+
+    Awards:
+      - title: Anthropic AI for Science award
+        date: 2026
+        awarder: Anthropic
+        summary: For research at the intersection of physics and AI.
+      - title: Murdin Prize
+        date: 2021
+        awarder: University of Cambridge
+        summary: Best PhD research paper of the academic year.
+      - title: P. Murdin Research Fund
+        date: 2021
+        awarder: University of Cambridge
+        summary: Most promising PhD research project for a research stay abroad.
+      - title: Wolfson Research Grant
+        date: 2020
+        awarder: Wolfson College, University of Cambridge
+      - title: Isaac Newton PhD Studentship
+        date: 2018
+        awarder: University of Cambridge
+        summary: Full merit-based three-year stipend, awarded to one physics PhD student per year.
+      - title: ANF Excellence Prize
+        date: 2018
+        awarder: French Youth Association, Paris
+        summary: Awarded to one French student per year for exceptional academic distinction and promise.
+      - title: Master's Thesis Grant
+        date: 2017
+        awarder: ETH Zurich
+        summary: Awarded to one master's student per semester to carry out the thesis abroad.
+      - title: Bachelor's Thesis Grant
+        date: 2016
+        awarder: ETH Zurich
+        summary: Awarded to one bachelor's student per semester to carry out the thesis abroad.
+      - title: Hansenberg Scholarship
+        date: 2008
+        awarder: Hansenberg boarding school, Germany
+        summary: Merit-based three-year scholarship.
+
+    Media:
+      - bullet: "[*Probing the Cosmic Web*](https://physics.aps.org/articles/v19/s33) — Synopsis in *Physics* (March 2026) on our Physical Review Letters paper, selected as a Featured article."
+
+    Teaching:
+      - bullet: "Lecture-notes assistant, *Cosmology* — University of Cambridge, Easter 2021"
+      - bullet: "Course assistant, *Introduction to Cosmology* — University of Cambridge, Lent 2020"
+      - bullet: "Teaching assistant, *Analysis I, II & III for Engineers* — University of Cambridge, 2019–2021"
+      - bullet: "Teaching assistant, *Introduction to Complex Analysis* — ETH Zurich, 2015–2017"
+
+    References:
+      - name: Available upon request
+        icon: fa-solid fa-envelope
+        reference: ""

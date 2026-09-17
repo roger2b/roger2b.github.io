@@ -1,0 +1,39 @@
+# Configuration for scripts/generate_pubs.py — regenerates _bibliography/papers.bib from INSPIRE-HEP.
+# Edit THIS file (never papers.bib) to pin, exclude or retitle papers.
+author_query: "Roger.De.Belsunce.1"        # INSPIRE BAI (author profile https://inspirehep.net/authors/1720237)
+
+self:
+  last: "de Belsunce"                       # wrapped as {de Belsunce} so BibTeX keeps the particle
+  first_variants: ["Roger", "R."]
+
+exclude:                                   # texkeys never shown
+  - deBelsunce:2022fkj                     # PhD thesis
+
+selected:                                  # shown on the home page ("Selected publications"), in this order of year
+  - deBelsunce:2025bqc                     # PRL: Modeling the Lyman-α forest at the field level
+  - Sullivan:2026tas                       # tentative detection of neutrino mass
+  - deBelsunce:2025qku                     # JCAP: Planck lensing × DESI DR1 quasars
+  - deBelsunce:2024knf                     # MNRAS: 3D Lyman-α power spectrum from eBOSS DR16
+  - deBelsunce:2021mec                     # MNRAS: optical depth to reionization
+
+title_overrides: {}                        # texkey: "Exact title" — escape hatch for INSPIRE oddities
+
+author_name_fixes:                         # INSPIRE spelling -> preferred (LaTeX accents are rendered by jekyll-scholar)
+  "Irsic, Vid": "Ir\\v{s}i\\v{c}, Vid"
+  "Lukic, Zarija": "Luki\\'c, Zarija"
+  "Karaçayli, Naim Göksel": "Karaçaylı, Naim Göksel"
+
+bib_button_on_all: true                    # show the "Bib" button on every entry (false: only on selected papers)
+
+expand_author_lists: true                  # rebuild "… and others" from the INSPIRE JSON for non-collaboration papers
+max_expanded_authors: 80
+
+journal_abbr:                              # journal (as in INSPIRE BibTeX) -> badge label in _data/venues.yml
+  "Phys. Rev. Lett.": PRL
+  "Phys. Rev. D": PRD
+  "JCAP": JCAP
+  "Mon. Not. Roy. Astron. Soc.": MNRAS
+  "Astrophys. J.": ApJ
+  "Astrophys. J. Supp.": ApJS
+  "Astron. J.": AJ
+  "PoS": PoS
