@@ -30,7 +30,7 @@ bundle exec jekyll serve --livereload
 
 ## Common edits
 
-- **Pin or unpin a paper on the home page**: edit the `selected:` list in `scripts/pubs_config.yaml` (INSPIRE texkeys), then regenerate.
+- **Home page "Recent publications"**: shows the five newest entries automatically (`_includes/selected_papers.liquid`). To show a hand-picked set instead, change it to `{% bibliography --group_by none --query @*[selected=true]* %}` and edit the `selected:` list in `scripts/pubs_config.yaml`.
 - **Hide a paper or fix a title / author spelling**: `exclude:`, `title_overrides:` or `author_name_fixes:` in `scripts/pubs_config.yaml`, then regenerate.
 - **Swap a research figure**: replace the PNG in `assets/img/research/` and, if needed, the `alt` text in `_pages/research.md`.
 
