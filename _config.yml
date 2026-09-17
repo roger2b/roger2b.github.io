@@ -190,6 +190,7 @@ exclude:
   - package-lock.json
   - purgecss.config.js
   - README.md
+  - EDITING.md
   - readme_preview/
   - vendor
   - requirements.txt
