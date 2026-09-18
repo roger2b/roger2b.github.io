@@ -16,7 +16,7 @@ cv:
         start_date: 2025
         end_date: present
         highlights:
-          - "Mentor: Mikhail M. Ivanov"
+          - "Mentor: Prof. Mikhail M. Ivanov"
           - "Theoretical modelling of cross-correlations between high-redshift tracers for next-generation spectroscopic surveys"
           - "Probabilistic variational inference for dark-matter searches with Fermi-LAT data"
       - company: NSF AI Institute for Artificial Intelligence and Fundamental Interactions (IAIFI)
@@ -35,7 +35,7 @@ cv:
         start_date: 2022
         end_date: 2025
         highlights:
-          - "Mentors: Nathalie Palanque-Delabrouille & Simone Ferraro"
+          - "Mentors: Prof. Nathalie Palanque-Delabrouille & Dr. Simone Ferraro"
           - "Detection of the cross-correlation between CMB lensing and the Lyman-α forest"
           - "First measurement of the 3D power spectrum of the Lyman-α forest"
 
@@ -46,7 +46,7 @@ cv:
         start_date: 2018
         end_date: 2022
         highlights:
-          - "Advisors: George Efstathiou & Steven Gratton"
+          - "Advisors: Prof. George Efstathiou & Dr. Steven Gratton"
           - "Thesis: *Cosmology from the CMB and Lyman-α forest* — primordial gravitational waves from polarized CMB data; likelihood approximations and Bayesian foreground removal for large-angle CMB data"
       - institution: ETH Zurich
         location: Zurich, Switzerland
@@ -54,8 +54,8 @@ cv:
         start_date: 2012
         end_date: 2018
         highlights:
-          - "Master's thesis in theoretical cosmology at Stanford University with Leonardo Senatore (2017–2018): dark-matter clustering with massive neutrinos in the effective field theory of large-scale structure"
-          - "Bachelor's thesis in particle physics at CERN with Günther Dissertori (2016): photon scintillation modelling for an upgraded LHC detector"
+          - "Master's thesis in theoretical cosmology at Stanford University with Prof. Leonardo Senatore (2017–2018): dark-matter clustering with massive neutrinos in the effective field theory of large-scale structure"
+          - "Bachelor's thesis in particle physics at CERN with Prof. Günther Dissertori (2016): photon scintillation modelling for an upgraded LHC detector"
 
     Awards:
       - title: Anthropic AI for Science award
