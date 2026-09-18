@@ -93,14 +93,6 @@ layout: default
       </div>
     </div>
 
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Recent publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %}
-
     <!-- In the media -->
     {% if page.media and site.data.media %}
       <h2>In the Media</h2>
@@ -123,6 +115,14 @@ layout: default
         {% endfor %}
         </ol>
       </div>
+    {% endif %}
+
+    <!-- Selected papers -->
+    {% if page.selected_papers %}
+      <h2>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Recent publications</a>
+      </h2>
+      {% include selected_papers.liquid %}
     {% endif %}
 
     <!-- Social -->
