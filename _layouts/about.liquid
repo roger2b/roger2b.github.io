@@ -105,7 +105,9 @@ layout: default
     {% if page.media and site.data.media %}
       <h2>In the Media</h2>
       <div class="publications">
+        <ol class="bibliography">
         {% for item in site.data.media %}
+          <li>
           <div class="row">
             <div class="col col-sm-2 abbr">
               {% if item.badge %}
@@ -117,7 +119,9 @@ layout: default
               <div class="periodical">{{ item.description | markdownify | remove: '<p>' | remove: '</p>' }}</div>
             </div>
           </div>
+          </li>
         {% endfor %}
+        </ol>
       </div>
     {% endif %}
 
