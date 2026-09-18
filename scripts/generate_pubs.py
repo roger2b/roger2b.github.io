@@ -21,10 +21,20 @@ import yaml
 API = "https://inspirehep.net/api/literature"
 JSON_FIELDS = "texkeys,authors.full_name,collaborations,citation_count,control_number,document_type,publication_info"
 
+def _ssl_context():
+    """Use the certifi bundle when available (python.org builds on macOS ship without system certificates)."""
+    import ssl
+    try:
+        import certifi
+        return ssl.create_default_context(cafile=certifi.where())
+    except ImportError:
+        return ssl.create_default_context()
+
 def fetch(url):
+    ctx = _ssl_context()
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "rbelsunce.github.io pubs script"}), timeout=60) as r:
+            with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "roger2b.github.io pubs script"}), timeout=60, context=ctx) as r:
                 return r.read().decode("utf-8")
         except Exception as e:  # noqa: BLE001
             print(f"  attempt {attempt+1} failed: {e}", file=sys.stderr)

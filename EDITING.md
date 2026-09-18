@@ -42,7 +42,7 @@ python3 scripts/generate_pubs.py --config scripts/pubs_config.yaml \
     --offline-bib ../input/inspire_papers.bib --offline-json ../input/inspire_papers.json   # from saved exports
 ```
 
-Needs Python 3 with PyYAML (`pip install -r requirements.txt`). The GitHub Actions workflow (`.github/workflows/deploy.yml`) runs the same
+Needs Python 3 with PyYAML (`pip install -r requirements.txt`). If a local run fails with `CERTIFICATE_VERIFY_FAILED`, also `pip install certifi`. The GitHub Actions workflow (`.github/workflows/deploy.yml`) runs the same
 script on every push and every Monday, commits a changed `papers.bib` back to `main`, builds the site and deploys it to the `gh-pages` branch.
 If the publication list looks stale, check *Actions → Deploy site* on GitHub (GitHub pauses scheduled workflows in repositories with no activity for 60 days; re-enable it there).
 
