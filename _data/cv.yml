@@ -7,12 +7,6 @@ cv:
     Cosmologist working on the Lyman-α forest, the cosmic microwave background and the growth of structure.
     I combine analytic theory, simulations and machine learning to extract fundamental physics from surveys such as DESI and Planck.
 
-  address:
-    city: Cambridge
-    region: MA
-    postalCode: "02139"
-    countryCode: US
-
   sections:
     Experience:
       - company: Massachusetts Institute of Technology
@@ -86,7 +80,7 @@ cv:
       - title: ANF Excellence Prize
         date: 2018
         awarder: French Youth Association, Paris
-        summary: Awarded to one French student per year for exceptional academic distinction and promise.
+        summary: Awarded yearly for exceptional academic distinction and promise.
       - title: Master's Thesis Grant
         date: 2017
         awarder: ETH Zurich

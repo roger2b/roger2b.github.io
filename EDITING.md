@@ -20,7 +20,8 @@ bundle exec jekyll serve --livereload
 | Site settings, name, feature flags | `_config.yml` |
 | Home page text | `_pages/about.md` (the four cards live in `_layouts/about.liquid`) |
 | Research highlights | `_pages/research.md`; figures in `assets/img/research/` |
-| Publications | `_bibliography/papers.bib` — **generated**, never hand-edit; see below |
+| Publications | `_bibliography/papers.bib` and `_data/citation_summary.yml` — **generated**, never hand-edit; see below |
+| In the Media (home page) | `_data/media.yml` |
 | Code list | `_pages/code.md` |
 | CV (HTML only, no PDF) | `_data/cv.yml` (rendered by `_pages/cv.md`) |
 | Social icons | `_data/socials.yml`; venue badges: `_data/venues.yml` |

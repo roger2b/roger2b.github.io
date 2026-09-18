@@ -101,6 +101,26 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
+    <!-- In the media -->
+    {% if page.media and site.data.media %}
+      <h2>In the Media</h2>
+      <div class="publications">
+        {% for item in site.data.media %}
+          <div class="row">
+            <div class="col col-sm-2 abbr">
+              {% if item.badge %}
+                <abbr class="badge rounded w-100">{% if item.badge_url %}<a href="{{ item.badge_url }}">{{ item.badge }}</a>{% else %}<div>{{ item.badge }}</div>{% endif %}</abbr>
+              {% endif %}
+            </div>
+            <div class="col-sm-8">
+              <div class="title"><a href="{{ item.url }}">{{ item.title }}</a></div>
+              <div class="periodical">{{ item.description | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
     <!-- Social -->
     {% if page.social %}
       <div class="social">
