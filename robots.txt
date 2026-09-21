@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://roger2b.github.io/sitemap.xml
